@@ -69,4 +69,4 @@ The table below shows comparisons of actual vs predicted attendance using the fi
 
 Note: The Detroit Tigers’ stadium capacity is 41,083.
 
-
+Below is a line graph of predicted and actual attendance over the 2018 and 2019 seasons (total of 162 home games). Note the spikes are the two home openers.
