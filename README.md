@@ -101,5 +101,3 @@ Out of curiosity, I repeated this same process to train my model on the 2015-201
 
 **Table 4:** Quantified comparisons of predicted vs actual attendance for 2013 and 2013 seasons.
 
-
-
