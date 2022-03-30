@@ -26,7 +26,7 @@ The MLB Stats API wrapper was used to collect the following data for each game i
 - Game attendance
 
 ## Data Cleaning and Wrangling
-After collection, cleaned and wrangled the data so that it can used to run machine learning (ML) models. I created the following variables/features:
+After collection, I cleaned and wrangled the data so that it can used to run machine learning (ML) models. I created the following variables/features:
 - Game number: I assigned a number to each home game in chronological order (0 for the home-opener, 1 for the 2nd home game, etc.). The numbering starts over for each new season.
 - The day of the week that the game was played, where each day is represented by an integer (0-6 = Mon-Sun).
 - Game start time: transformed to military time so that ML models read them chronologically (e.g., a 12:10pm start time won’t be interpreted as a later start time than 7:10pm). Times were also converted to decimal form (e.g., 7:15pm start time is inputted to ML models as 19.25).
@@ -63,7 +63,7 @@ After experimenting, I found that removing some of the features improved the res
  
 The table below shows comparisons of actual vs predicted attendance using the final set of features.
 ![lin_reg_results_table](https://user-images.githubusercontent.com/90481059/160764840-46752dd7-1dad-4d17-9097-e90b0efa2cd0.PNG)
-* % Diff. = |Pred. Average – Actual Average| / Actual Average x 100
+"*" % Diff. = |Pred. Average – Actual Average| / Actual Average x 100
 
 Note: The Detroit Tigers’ stadium capacity is 41,083.
 
