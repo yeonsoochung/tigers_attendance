@@ -44,10 +44,11 @@ After collection, I cleaned and wrangled the data so that it can used to run mac
 - Attendance is the dependent variable to be predicted. Since home-openers consistently bring full-stadium crowds, I used the average of the training data's home-opener attendances to predict the attendance of 2018-2019 home-openers.
 
 ## Data Analysis and Model Building
-Below is a correlation heat map chart of the features.
+The chart in Figure 1 was used to detect multicollinearity, which revealed significant correlation (0.52) between Game Number and Temperature. This makes sense since the temperature trend increases as the season progresses into the summer and early fall. To address this, a new feature called “Game+Temp” was created, which is simply the sum of the Game Number and Temperature arrays.
+
 ![corr_heat_map](https://user-images.githubusercontent.com/90481059/160762654-e788cafe-069a-46e3-af80-bdb28d460790.png)
 
-This chart was used to detect multicollinearity, which revealed significant correlation (0.52) between Game Number and Temperature. This makes sense since the temperature trend increases as the season progresses into the summer and early fall. To address this, a new feature called “Game+Temp” was created, which is simply the sum of the Game Number and Temperature arrays.
+**Figure 1:** A correlation heat map chart of the features.
 
 ## Results
 I first focused on the multiple linear regression (ordinary least squares) model to make attendance predictions. Predictions were evaluated with two methods:
@@ -70,3 +71,6 @@ The table below shows comparisons of actual vs predicted attendance using the fi
 Note: The Detroit Tigers’ stadium capacity is 41,083.
 
 Below is a line graph of predicted and actual attendance over the 2018 and 2019 seasons (total of 162 home games). Note the spikes are the two home openers.
+
+![lin_reg_results_graph](https://user-images.githubusercontent.com/90481059/160924072-36aa81ef-cdc2-4374-b0d5-b7b2a5e66eb1.png)
+
