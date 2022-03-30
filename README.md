@@ -84,3 +84,9 @@ It is very likely that better results than above can be achieved with different 
 
 ## 2013-2019 Attendance Statistics
 For reference, this section contains statistical descriptions of all actual attendance data collected for this project. 
+![all_att_line_graph](https://user-images.githubusercontent.com/90481059/160933920-fbb33dba-d0e8-44db-a394-ed8315578af4.PNG)
+
+**Figure 3:** Graph of attendance of all home games in the 2013-2019 seasons.
+
+**Table 3:** Descriptive statistics of attendance of all home games in the 2013-2019 seasons. 
+
