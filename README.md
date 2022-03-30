@@ -26,8 +26,8 @@ The MLB Stats API wrapper was used to collect the following data for each game i
 - Game attendance
 
 ## Data Cleaning and Wrangling
-After collection, the data was cleaned and wrangled so that it can used to run machine learning (ML) models. The following variables/features were created:
-- A game number was assigned to each home game in chronological order (0 for the home-opener, 1 for the 2nd home game, etc.).
+After collection, cleaned and wrangled the data so that it can used to run machine learning (ML) models. I created the following variables/features:
+- Game number: I assigned a number to each home game in chronological order (0 for the home-opener, 1 for the 2nd home game, etc.). The numbering starts over for each new season.
 - The day of the week that the game was played, where each day is represented by an integer (0-6 = Mon-Sun).
 - Game start time: transformed to military time so that ML models read them chronologically (e.g., a 12:10pm start time won’t be interpreted as a later start time than 7:10pm). Times were also converted to decimal form (e.g., 7:15pm start time is inputted to ML models as 19.25).
 - Weather conditions: There are six categories of weather conditions represented as integers.
@@ -40,6 +40,9 @@ After collection, the data was cleaned and wrangled so that it can used to run m
   - Rain = 1
 - Home starting pitcher represented as integers: 6 used for the best starter (ace), 5 for the next pitcher in the rotation, and so on down to 1. Since the rotation can change throughout a season, I determined these integers subjectively (see pitchers_list.py) based on the season-ending statistics of each team’s pitchers, such as ERA, record, number of starts, number of innings pitched, and, if necessary, previous season’s performance.
 - Opponent starting pitchers were categorized in the same manner as home starters.
-- Tigers’ win rate entering each game. The first 15 home games’ win rate were replaced with the previous season’s final win rate due to avoid.
-- Attendance is the dependent variable to be predicted. Since home-openers consistently bring full-stadium crowds, the average home-opener attendance in the training data was used to predict the attendance of home-openers.
+- Tigers’ win rate entering each game. The first 15 home games’ win rate were replaced with the previous season’s final win rate.
+- Attendance is the dependent variable to be predicted. Since home-openers consistently bring full-stadium crowds, I used the average of the training data's home-opener attendances to predict the attendance of 2018-2019 home-openers.
+
+## Data Analysis and Model Building
+Below is a correlation heat map chart of the features.
 
