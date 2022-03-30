@@ -46,3 +46,4 @@ After collection, cleaned and wrangled the data so that it can used to run machi
 ## Data Analysis and Model Building
 Below is a correlation heat map chart of the features.
 ![corr_heat_map](https://user-images.githubusercontent.com/90481059/160762654-e788cafe-069a-46e3-af80-bdb28d460790.png)
+This chart was used to detect multicollinearity, which revealed significant correlation (0.52) between Game Number and Temperature. This makes sense since the temperature trend increases as the season progresses into the summer and early fall. To address this, a new feature called “Game+Temp” was created, which is simply the sum of the Game Number and Temperature arrays.
