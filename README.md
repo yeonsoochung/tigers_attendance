@@ -95,5 +95,11 @@ For reference, this section contains statistical descriptions of all actual atte
 ## Miscellaneous
 Out of curiosity, I repeated this same process to train my model on the 2015-2019 seasons and to “predict” the attendance for the 2013-2014 seasons. The Tigers finished first in their division in both of these years, so I thought it would be interesting to see how the model would predict attendance for such seasons. I used the final set of features that gave the best results for 2018-2019.
 
+![lin_reg_2013_2014](https://user-images.githubusercontent.com/90481059/160935812-ad37343d-d4e5-45e1-9483-90b20505b603.PNG)
+
+**Figure 4:** Line graph of predicted and actual attendance for 2013 and 2014 seasons.
+
+**Table 4:** Quantified comparisons of predicted vs actual attendance for 2013 and 2013 seasons.
+
 
 
