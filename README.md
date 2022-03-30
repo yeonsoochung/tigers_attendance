@@ -87,7 +87,6 @@ For reference, this section contains statistical descriptions of all actual atte
 **Figure 3:** Graph of attendance of all home games in the 2013-2019 seasons.
 
 **Table 3:** Descriptive statistics of attendance of all home games in the 2013-2019 seasons. 
-
 ![all_att_stats_table](https://user-images.githubusercontent.com/90481059/160934113-4197522e-06b0-49cc-9520-ef24498c67d3.PNG)
 
 ## Miscellaneous
@@ -97,4 +96,13 @@ Out of curiosity, I repeated this same process to train my model on the 2015-201
 **Figure 4:** Line graph of predicted and actual attendance for 2013 and 2014 seasons.
 
 **Table 4:** Quantified comparisons of predicted vs actual attendance for 2013 and 2013 seasons.
+![lin_reg_2013_2014_table](https://user-images.githubusercontent.com/90481059/160936805-09a1ad43-6dd9-4eac-bdcf-8021f4a954e0.PNG)
 
+## Code
+Description of the Python files written for this project and uploaded to this repo:
+- tigers_2013.py, tigers_2014.py, tigers_2014.py, tigers_2015, tigers_2016, tigers_2017, tigers_2018, tigers_2019.py contain code for data collection and cleaning/wrangling for each season.
+- pitchers_list.py contains a dictionary of pitchers assigned to integers for each season.
+- tigers_att_model.py contains the code for running the linear regression model.
+
+## Conclusion
+This was my first personal data science project in which I collected, cleaned, and wrangled my own unique data set before using them to implement ML models. I gained valuable practical skills in programming with Python as well as using the pandas and sklearn libraries. I am particularly interested in developing my skills in regression models and predictive analytics, so there will certainly be more projects with this sort of focus on the way.
