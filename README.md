@@ -70,7 +70,6 @@ After experimenting, I found that removing some of the features improved the res
 Note: The Detroit Tigers’ stadium capacity is 41,083.
 
 ![lin_reg_results_graph](https://user-images.githubusercontent.com/90481059/160924072-36aa81ef-cdc2-4374-b0d5-b7b2a5e66eb1.png)
-
 **Figure 2:** Line graph of predicted and actual attendance over the 2018 and 2019 seasons. Note the spikes are the two home openers. Also, n=159 because games with no attendance (due to double-headers) were dropped.
 
 The predictions appear to follow the trends relatively well for 2018, but greatly over-predicts for 2019. The 2019 season was a historically poor season for the Tigers in which they lost 114 games - 2nd worst in franchise history. The model clearly could not fully the take severity of this performance into account with the training data.
@@ -85,7 +84,6 @@ It is very likely that better results than above can be achieved with different 
 ## 2013-2019 Attendance Statistics
 For reference, this section contains statistical descriptions of all actual attendance data collected for this project. 
 ![all_att_line_graph](https://user-images.githubusercontent.com/90481059/160933920-fbb33dba-d0e8-44db-a394-ed8315578af4.PNG)
-
 **Figure 3:** Graph of attendance of all home games in the 2013-2019 seasons.
 
 **Table 3:** Descriptive statistics of attendance of all home games in the 2013-2019 seasons. 
@@ -96,7 +94,6 @@ For reference, this section contains statistical descriptions of all actual atte
 Out of curiosity, I repeated this same process to train my model on the 2015-2019 seasons and to “predict” the attendance for the 2013-2014 seasons. The Tigers finished first in their division in both of these years, so I thought it would be interesting to see how the model would predict attendance for such seasons. I used the final set of features that gave the best results for 2018-2019.
 
 ![lin_reg_2013_2014](https://user-images.githubusercontent.com/90481059/160935812-ad37343d-d4e5-45e1-9483-90b20505b603.PNG)
-
 **Figure 4:** Line graph of predicted and actual attendance for 2013 and 2014 seasons.
 
 **Table 4:** Quantified comparisons of predicted vs actual attendance for 2013 and 2013 seasons.
