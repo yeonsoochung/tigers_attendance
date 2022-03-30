@@ -52,6 +52,7 @@ This chart was used to detect multicollinearity, which revealed significant corr
 I first focused on the multiple linear regression (ordinary least squares) model to make attendance predictions. Predictions were evaluated with two methods:
 1.	Predicted vs actual average season attendance
 2.	Mean absolute error (MAE)
+
 After experimenting, I found that removing some of the features improved the results. Therefore, the final features used are:
 - Game+Temp: sum of game number and temperature feature arrays.
 - Day (0-6 = Mon-Sun)
@@ -62,3 +63,8 @@ After experimenting, I found that removing some of the features improved the res
  
 The table below shows comparisons of actual vs predicted attendance using the final set of features.
 ![lin_reg_results_table](https://user-images.githubusercontent.com/90481059/160764840-46752dd7-1dad-4d17-9097-e90b0efa2cd0.PNG)
+* % Diff. = |Pred. Average – Actual Average| / Actual Average x 100
+
+Note: The Detroit Tigers’ stadium capacity is 41,083.
+
+
