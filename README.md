@@ -64,6 +64,7 @@ After experimenting, I found that removing some of the features improved the res
  
 **Table 1:** Comparison of actual vs predicted attendances using the final set of features listed above.
 ![lin_reg_results_table](https://user-images.githubusercontent.com/90481059/160764840-46752dd7-1dad-4d17-9097-e90b0efa2cd0.PNG)
+
 *% Diff. = |Pred. Average – Actual Average| / Actual Average x 100
 
 Note: The Detroit Tigers’ stadium capacity is 41,083.
@@ -72,3 +73,10 @@ Below is a line graph of predicted and actual attendance over the 2018 and 2019 
 
 ![lin_reg_results_graph](https://user-images.githubusercontent.com/90481059/160924072-36aa81ef-cdc2-4374-b0d5-b7b2a5e66eb1.png)
 
+**Figure 2:** Line graph of predicted and actual attendance over the 2018 and 2019 seasons (total of 162 home games). Note the spikes are the two home openers.
+
+The predictions appear to follow the trends relatively well for 2018, but greatly over-predicts for 2019. The 2019 season was a historically poor season for the Tigers in which they lost 114 games - 2nd worst in franchise history. The model clearly could not fully the take severity of this performance into account with the training data.
+
+Despite a weaker theoretical background in more advanced ML models, I attempted to make better predictions with random forest regressor and support vector regression models. 
+
+**Table 2:** The best MAE obtained after trialing a variety of parameters as inputs to the random forest regressor and support vector regression models.
