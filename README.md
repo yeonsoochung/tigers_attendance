@@ -61,4 +61,4 @@ After experimenting, I found that removing some of the features improved the res
 - Opponent’s win rate
  
 The table below shows comparisons of actual vs predicted attendance using the final set of features.
-![lin_reg_results_table](https://user-images.githubusercontent.com/90481059/160764648-fd9e4449-210c-4f78-83d7-f48e42039806.PNG)
+
