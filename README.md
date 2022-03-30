@@ -78,3 +78,9 @@ The predictions appear to follow the trends relatively well for 2018, but greatl
 Despite a weaker theoretical background in more advanced ML models, I attempted to make better predictions with random forest regressor and support vector regression models. 
 
 **Table 2:** The best MAE obtained after trialing a variety of parameters as inputs to the random forest regressor and support vector regression models.
+![rfr_svr_mae_table](https://user-images.githubusercontent.com/90481059/160932633-a8263ebf-e727-4cee-b56b-d08f86ad632c.PNG)
+
+It is very likely that better results than above can be achieved with different parameters. However, based on the number of trials that were run and their results, I believe that the linear regression model produces the best predictions compared to actual.
+
+## 2013-2019 Attendance Statistics
+For reference, this section contains statistical descriptions of all actual attendance data collected for this project. 
