@@ -73,7 +73,7 @@ Below is a line graph of predicted and actual attendance over the 2018 and 2019 
 
 ![lin_reg_results_graph](https://user-images.githubusercontent.com/90481059/160924072-36aa81ef-cdc2-4374-b0d5-b7b2a5e66eb1.png)
 
-**Figure 2:** Line graph of predicted and actual attendance over the 2018 and 2019 seasons (total of 162 home games). Note the spikes are the two home openers.
+**Figure 2:** Line graph of predicted and actual attendance over the 2018 and 2019 seasons (total of 162 home games). Note the spikes are the two home openers. Also, n=159 because games with no attendance (due to double-headers) were dropped.
 
 The predictions appear to follow the trends relatively well for 2018, but greatly over-predicts for 2019. The 2019 season was a historically poor season for the Tigers in which they lost 114 games - 2nd worst in franchise history. The model clearly could not fully the take severity of this performance into account with the training data.
 
