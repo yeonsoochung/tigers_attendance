@@ -62,7 +62,7 @@ After experimenting, I found that removing some of the features improved the res
 - Win rate
 - Opponent’s win rate
  
-**Table 1:** Comparison of actual vs predicted attendances using the final set of features listed above.
+**Table 1:** Quantified comparisons of actual vs predicted attendances using the final set of features listed above.
 ![lin_reg_results_table](https://user-images.githubusercontent.com/90481059/160764840-46752dd7-1dad-4d17-9097-e90b0efa2cd0.PNG)
 
 *% Diff. = |Pred. Average – Actual Average| / Actual Average x 100
@@ -89,4 +89,11 @@ For reference, this section contains statistical descriptions of all actual atte
 **Figure 3:** Graph of attendance of all home games in the 2013-2019 seasons.
 
 **Table 3:** Descriptive statistics of attendance of all home games in the 2013-2019 seasons. 
+
+![all_att_stats_table](https://user-images.githubusercontent.com/90481059/160934113-4197522e-06b0-49cc-9520-ef24498c67d3.PNG)
+
+## Miscellaneous
+Out of curiosity, I repeated this same process to train my model on the 2015-2019 seasons and to “predict” the attendance for the 2013-2014 seasons. The Tigers finished first in their division in both of these years, so I thought it would be interesting to see how the model would predict attendance for such seasons. I used the final set of features that gave the best results for 2018-2019.
+
+
 
