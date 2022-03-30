@@ -62,9 +62,8 @@ After experimenting, I found that removing some of the features improved the res
 - Win rate
 - Opponent’s win rate
  
-The table below shows comparisons of actual vs predicted attendance using the final set of features.
+**Table 1:** Comparison of actual vs predicted attendances using the final set of features listed above.
 ![lin_reg_results_table](https://user-images.githubusercontent.com/90481059/160764840-46752dd7-1dad-4d17-9097-e90b0efa2cd0.PNG)
-
 *% Diff. = |Pred. Average – Actual Average| / Actual Average x 100
 
 Note: The Detroit Tigers’ stadium capacity is 41,083.
