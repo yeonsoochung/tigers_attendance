@@ -45,4 +45,4 @@ After collection, cleaned and wrangled the data so that it can used to run machi
 
 ## Data Analysis and Model Building
 Below is a correlation heat map chart of the features.
-
+![corr_heat_map](https://user-images.githubusercontent.com/90481059/160762654-e788cafe-069a-46e3-af80-bdb28d460790.png)
