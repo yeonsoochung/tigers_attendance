@@ -46,7 +46,7 @@ After collection, I cleaned and wrangled the data so that it can used to run mac
 ## Data Analysis and Model Building
 The chart in Figure 1 was used to detect multicollinearity, which revealed significant correlation (0.52) between Game Number and Temperature. This makes sense since the temperature trend increases as the season progresses into the summer and early fall. To address this, a new feature called “Game+Temp” was created, which is simply the sum of the Game Number and Temperature arrays.
 
-![corr_heat_map](https://user-images.githubusercontent.com/90481059/160762654-e788cafe-069a-46e3-af80-bdb28d460790.png)
+![corr_heat_map](https://user-images.githubusercontent.com/90481059/161100308-51f49e81-54d1-4f4c-80e3-49fb6dd6611e.png)
 **Figure 1:** A correlation heat map chart of the features.
 
 ## Results
@@ -63,13 +63,13 @@ After experimenting, I found that removing some of the features improved the res
 - Opponent’s win rate
  
 **Table 1:** Quantified comparisons of actual vs predicted attendances using the final set of features listed above.
-![lin_reg_results_table](https://user-images.githubusercontent.com/90481059/160764840-46752dd7-1dad-4d17-9097-e90b0efa2cd0.PNG)
+![lin_reg_results_table](https://user-images.githubusercontent.com/90481059/161100378-067b9d3e-a06c-44a9-bcbb-fe8636df2162.PNG)
 
 *% Diff. = |Pred. Average – Actual Average| / Actual Average x 100
 
 Note: The Detroit Tigers’ stadium capacity is 41,083.
 
-![lin_reg_results_graph](https://user-images.githubusercontent.com/90481059/160924072-36aa81ef-cdc2-4374-b0d5-b7b2a5e66eb1.png)
+![lin_reg_results_graph](https://user-images.githubusercontent.com/90481059/161100414-3f0f8f6d-9bac-4144-92ab-12003586b278.png)
 **Figure 2:** Line graph of predicted and actual attendance over the 2018 and 2019 seasons. Note the spikes are the two home openers. Also, n=159 because zero-attendance games (due to double-headers) were dropped, and the Tigers played one fewer (home) game than usual in 2019.
 
 The predictions appear to follow the trends relatively well for 2018, but greatly over-predicts for 2019. The 2019 season was a historically poor season for the Tigers in which they lost 114 games - 2nd worst in franchise history. The model clearly could not fully take the severity of this level of performance into account with the training data.
@@ -77,26 +77,26 @@ The predictions appear to follow the trends relatively well for 2018, but greatl
 Despite a weaker theoretical background in more advanced ML models, I attempted to make better predictions with random forest regressor and support vector regression models. 
 
 **Table 2:** The best MAE obtained after trialing a variety of parameters as inputs to the random forest regressor and support vector regression models.
-![rfr_svr_mae_table](https://user-images.githubusercontent.com/90481059/160932633-a8263ebf-e727-4cee-b56b-d08f86ad632c.PNG)
+![rfr_svr_mae_table](https://user-images.githubusercontent.com/90481059/161100481-8f07b7de-4bb5-45d4-92de-5460164d05b2.PNG)
 
 It is very likely that better results than above can be achieved with different parameters. However, based on the number of trials that were run and their results, I believe that the linear regression model produces the best predictions compared to actual.
 
 ## 2013-2019 Attendance Statistics
 For reference, this section contains statistical descriptions of all actual attendance data collected for this project. 
-![all_att_line_graph](https://user-images.githubusercontent.com/90481059/160933920-fbb33dba-d0e8-44db-a394-ed8315578af4.PNG)
+![all_att_line_graph](https://user-images.githubusercontent.com/90481059/161100523-30f966c4-52e9-4bf1-a8ef-067794f85faf.PNG)
 **Figure 3:** Graph of attendance of all home games in the 2013-2019 seasons.
 
 **Table 3:** Descriptive statistics of attendance of all home games in the 2013-2019 seasons. 
-![all_att_stats_table](https://user-images.githubusercontent.com/90481059/160934113-4197522e-06b0-49cc-9520-ef24498c67d3.PNG)
+![all_att_stats_table](https://user-images.githubusercontent.com/90481059/161100547-9c2437e3-bff1-4d18-8662-9008ff60338c.PNG)
 
 ## Miscellaneous
 Out of curiosity, I repeated this same process to train my model on the 2015-2019 seasons and to “predict” the attendance for the 2013-2014 seasons. The Tigers finished first in their division in both of these years, so I thought it would be interesting to see how the model would predict attendance for such seasons. I used the final set of features that gave the best results for 2018-2019.
 
-![lin_reg_2013_2014_graph](https://user-images.githubusercontent.com/90481059/160936735-d00fa3dd-57ab-4b01-bcaa-33855c5575dc.PNG)
+![lin_reg_2013_2014_graph](https://user-images.githubusercontent.com/90481059/161100603-741ebdf3-25cc-4114-9599-2f6cb892777f.PNG)
 **Figure 4:** Line graph of predicted and actual attendance for 2013 and 2014 seasons.
 
 **Table 4:** Quantified comparisons of predicted vs actual attendance for 2013 and 2013 seasons.
-![lin_reg_2013_2014_table](https://user-images.githubusercontent.com/90481059/160936805-09a1ad43-6dd9-4eac-bdcf-8021f4a954e0.PNG)
+![lin_reg_2013_2014_table](https://user-images.githubusercontent.com/90481059/161100655-c464840c-3905-4e2e-bd84-4cc9ce45de1b.PNG)
 
 ## Code
 Description of the Python files written for this project and uploaded to this repo:
