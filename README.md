@@ -65,7 +65,7 @@ After experimenting, I found that removing some of the features improved the res
  
 **Table 1:** Quantified comparisons of actual vs predicted attendances using the final set of features listed above.
 
-![lin_reg_results_table](https://user-images.githubusercontent.com/90481059/161100378-067b9d3e-a06c-44a9-bcbb-fe8636df2162.PNG)
+![lin_reg_results_table](https://user-images.githubusercontent.com/90481059/161112843-ce46f548-35c9-42d4-b296-249be127c85a.PNG)
 
 *% Diff. = |Pred. Average – Actual Average| / Actual Average x 100
 
@@ -103,7 +103,7 @@ Out of curiosity, I repeated this same process to train my model on the 2015-201
 
 **Table 4:** Quantified comparisons of predicted vs actual attendance for 2013 and 2013 seasons.
 
-![lin_reg_2013_2014_table](https://user-images.githubusercontent.com/90481059/161100655-c464840c-3905-4e2e-bd84-4cc9ce45de1b.PNG)
+![lin_reg_2013_2014_table](https://user-images.githubusercontent.com/90481059/161112937-ea0af550-a324-46fe-ad38-1cbda1585802.PNG)
 
 ## Code
 Descriptions of the Python files written for this project and uploaded to this repo:
