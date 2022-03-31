@@ -105,4 +105,4 @@ Description of the Python files written for this project and uploaded to this re
 - tigers_att_model.py contains the code for running the linear regression model.
 
 ## Conclusion
-This was my first personal data science project in which I collected, cleaned, and wrangled my own unique data set before using them to implement ML models. I gained valuable practical skills in programming with Python as well as using the pandas and sklearn libraries. I am particularly interested in developing my skills in regression models and predictive analytics, so there will certainly be more projects with this sort of focus on the way.
+This was my first personal data science project in which I collected, cleaned, and wrangled my own data set before using them to implement ML models. I gained valuable practical skills in programming with Python as well as using the pandas and sklearn libraries. I am particularly interested in developing my skills in regression models and predictive analytics, so there will certainly be more projects with this sort of focus on the way.
