@@ -105,6 +105,8 @@ Out of curiosity, I repeated this same process to train my model on the 2015-201
 
 ![lin_reg_2013_2014_table](https://user-images.githubusercontent.com/90481059/161112937-ea0af550-a324-46fe-ad38-1cbda1585802.PNG)
 
+Interestingly, these predictions are much closer to actual. This make sense because a team that generates more excitement would attract larger crowds, and these numbers would have lower variation due to many of these values being close to and limited by a ceiling (i.e. the stadium capacity). On the other hand, how low the floor can be would be harder to predict.
+
 ## Code
 Descriptions of the Python files written for this project and uploaded to this repo:
 - tigers_2013.py, tigers_2014.py, tigers_2015.py, tigers_2016.py, tigers_2017.py, tigers_2018.py, tigers_2019.py contain code for data collection and cleaning/wrangling for each season.
