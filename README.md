@@ -86,7 +86,6 @@ Despite a weaker theoretical background in more advanced ML models, I attempted 
 It is very likely that better results than above can be achieved with different parameters. However, based on the number of trials that were run (by brute-force method up to a practical point) and their results, I believe that the linear regression model produces the best predictions compared to actual.
 
 ## Statistical Summary of 2013-2019 Attendance Data
-For reference, this section contains statistical descriptions of all actual attendance data collected for this project. 
 ![all_att_line_graph](https://user-images.githubusercontent.com/90481059/161100523-30f966c4-52e9-4bf1-a8ef-067794f85faf.PNG)
 
 **Figure 3:** Line graph of attendance for all home games in the 2013-2019 seasons.
