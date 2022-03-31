@@ -1,8 +1,8 @@
 # Predicting the Detroit Tigers' Home Game Attendance Numbers
 ## Project Overview
-Here I discuss my first personal data science project in which I predict the Detroit Tigers professional baseball team's home attendance numbers for the 2018 and 2019 seasons by training on data from the 2013-2017 seasons and inputting 2018-2019 test data to machine learning (ML) models. This repo contains the code I wrote to collect, clean, and wrangle the data and to run the ML models for this project. This project topic was selected based on some personal interest in the sport and suitability with my current skill level.
+Here I discuss my first personal data science project in which I predict the Detroit Tigers professional baseball team's home attendance numbers for the 2018 and 2019 seasons. I did this by training on data from the 2013-2017 seasons and inputting 2018-2019 test data to machine learning (ML) models. This repo contains the code I wrote to collect, clean, and wrangle the data and to run the ML models for this project. This project topic was selected based on my casual interest in the sport and suitability with my current skill level. The Tigers were selected as they are my home team.
 
-Predictions were made with multiple linear regression, random forest regression, and support vector regression models. Upon comparison with actual 2018-2019 home attendance data, it was found that the multiple linear regression model yielded the best results.
+Predictions were made with multiple linear regression, random forest regression, and support vector regression models. Upon comparison with actual 2018-2019 home attendance data, I found that the linear regression model yielded the best results.
 
 ## Code and Resources Used
 - Python Version: 3.8
@@ -12,7 +12,7 @@ Predictions were made with multiple linear regression, random forest regression,
 Special recognition should be given to Todd Roberts’ MLB Stats API Python web wrapper. Almost all the data used in this project’s analyses were extracted and collected via this Python package written by Mr. Roberts, which pulls data from mlb.com. The package can be easily installed to a Python environment, and its methods can be invoked to return data structures containing the pertinent information.
 
 ## Web Wrapping and Data Collection
-The MLB Stats API wrapper was used to collect the following data for each game in the 2013-2019 seasons:
+I used the MLB Stats API wrapper to collect the following data for each game in the 2013-2019 seasons:
 - Game date
 - Day of the week that each game was played
 - Game start time
@@ -26,11 +26,11 @@ The MLB Stats API wrapper was used to collect the following data for each game i
 - Game attendance
 
 ## Data Cleaning and Wrangling
-After collection, I cleaned and wrangled the data so that it can used to run machine learning (ML) models. I created the following variables/features:
+After collecting it, I cleaned and wrangled the data so that it can be used to run ML models. I created the following variables/features:
 - Game number: I assigned a number to each home game in chronological order (0 for the home-opener, 1 for the 2nd home game, etc.). The numbering starts over for each new season.
 - The day of the week that the game was played, where each day is represented by an integer (0-6 = Mon-Sun).
 - Game start time: transformed to military time so that ML models read them chronologically (e.g., a 12:10pm start time won’t be interpreted as a later start time than 7:10pm). Times were also converted to decimal form (e.g., 7:15pm start time is inputted to ML models as 19.25).
-- Weather conditions: There are six categories of weather conditions represented as integers.
+- Weather conditions: There are seven categories of weather conditions represented as integers 1-5.
   - Clear = 5
   - Sunny = 5
   - Partly Cloudy = 4
@@ -38,19 +38,20 @@ After collection, I cleaned and wrangled the data so that it can used to run mac
   - Overcast = 2
   - Drizzle = 1
   - Rain = 1
-- Home starting pitcher represented as integers: 6 used for the best starter (ace), 5 for the next pitcher in the rotation, and so on down to 1. Since the rotation can change throughout a season, I determined these integers subjectively (see pitchers_list.py) based on the season-ending statistics of each team’s pitchers, such as ERA, record, number of starts, number of innings pitched, and, if necessary, previous season’s performance.
-- Opponent starting pitchers were categorized in the same manner as home starters.
-- Tigers’ win rate entering each game. The first 15 home games’ win rate were replaced with the previous season’s final win rate.
-- Attendance is the dependent variable to be predicted. Since home-openers consistently bring full-stadium crowds, I used the average of the training data's home-opener attendances to predict the attendance of 2018-2019 home-openers.
+- Home starting pitchers represented as integers: 6 used for the best starter (ace), 5 for the next pitcher in the rotation, and so on down to 1. Since the rotation can change throughout a season, I determined these integers subjectively (see pitchers_list.py) based on the season-ending statistics of each team’s pitchers, such as ERA, record, number of starts, number of innings pitched, and, if necessary, previous season’s performance.
+- Opponent starting pitchers were represented in the same manner as home starters.
+- The Tigers’ win rate entering each game. The first 15 home games’ win rates were replaced with the previous season’s final win rate.
+- Attendance is the dependent variable to be predicted. Since home-openers consistently bring full-capacity crowds, I used the average of the training data's home-opener attendances to predict the attendance of 2018-2019 home-openers. The rest of the games were predicted with the regression model.
 
 ## Data Analysis and Model Building
-The chart in Figure 1 was used to detect multicollinearity, which revealed significant correlation (0.52) between Game Number and Temperature. This makes sense since the temperature trend increases as the season progresses into the summer and early fall. To address this, a new feature called “Game+Temp” was created, which is simply the sum of the Game Number and Temperature arrays.
+The chart in Figure 1 was used to detect multicollinearity, which revealed significant correlation (0.5) between Game Number and Temperature. This makes sense since the temperature trend increases as the season progresses into the summer and early fall. To address this, a new feature called “Game+Temp”, which is simply the sum of the 'Game Number' and 'Temperature (F)' arrays, was created to replace those two features.
 
 ![corr_heat_map](https://user-images.githubusercontent.com/90481059/161100308-51f49e81-54d1-4f4c-80e3-49fb6dd6611e.png)
+
 **Figure 1:** A correlation heat map chart of the features.
 
 ## Results
-I first focused on the multiple linear regression (ordinary least squares) model to make attendance predictions. Predictions were evaluated with two methods:
+I first focused on the multiple linear regression (ordinary least squares) model to make attendance predictions. Predictions were evaluated through two methods:
 1.	Predicted vs actual average season attendance
 2.	Mean absolute error (MAE)
 
@@ -63,6 +64,7 @@ After experimenting, I found that removing some of the features improved the res
 - Opponent’s win rate
  
 **Table 1:** Quantified comparisons of actual vs predicted attendances using the final set of features listed above.
+
 ![lin_reg_results_table](https://user-images.githubusercontent.com/90481059/161100378-067b9d3e-a06c-44a9-bcbb-fe8636df2162.PNG)
 
 *% Diff. = |Pred. Average – Actual Average| / Actual Average x 100
@@ -70,39 +72,45 @@ After experimenting, I found that removing some of the features improved the res
 Note: The Detroit Tigers’ stadium capacity is 41,083.
 
 ![lin_reg_results_graph](https://user-images.githubusercontent.com/90481059/161100414-3f0f8f6d-9bac-4144-92ab-12003586b278.png)
-**Figure 2:** Line graph of predicted and actual attendance over the 2018 and 2019 seasons. Note the spikes are the two home openers. Also, n=159 because zero-attendance games (due to double-headers) were dropped, and the Tigers played one fewer (home) game than usual in 2019.
 
-The predictions appear to follow the trends relatively well for 2018, but greatly over-predicts for 2019. The 2019 season was a historically poor season for the Tigers in which they lost 114 games - 2nd worst in franchise history. The model clearly could not fully take the severity of this level of performance into account with the training data.
+**Figure 2:** Line graph of predicted and actual attendance over the 2018 and 2019 seasons. Note the spikes are the two home openers. Also, n=160 because zero-attendance games (due to double-headers) were dropped.
+
+The model results appear to predict relatively well for 2018, but they over-predict for 2019. The 2019 season was a historically poor season for the Tigers in which they lost 114 games (2nd worst in franchise history), which could explain the model's performance for 2019.
 
 Despite a weaker theoretical background in more advanced ML models, I attempted to make better predictions with random forest regressor and support vector regression models. 
 
-**Table 2:** The best MAE obtained after trialing a variety of parameters as inputs to the random forest regressor and support vector regression models.
+**Table 2:** The best MAE's obtained after trialing many different parameter values as inputs to the random forest regressor and support vector regression models.
+
 ![rfr_svr_mae_table](https://user-images.githubusercontent.com/90481059/161100481-8f07b7de-4bb5-45d4-92de-5460164d05b2.PNG)
 
-It is very likely that better results than above can be achieved with different parameters. However, based on the number of trials that were run and their results, I believe that the linear regression model produces the best predictions compared to actual.
+It is very likely that better results than above can be achieved with different parameters. However, based on the number of trials that were run (by brute-force method up to a practical point) and their results, I believe that the linear regression model produces the best predictions compared to actual.
 
-## 2013-2019 Attendance Statistics
+## Statistical Summary of 2013-2019 Attendance Data
 For reference, this section contains statistical descriptions of all actual attendance data collected for this project. 
 ![all_att_line_graph](https://user-images.githubusercontent.com/90481059/161100523-30f966c4-52e9-4bf1-a8ef-067794f85faf.PNG)
-**Figure 3:** Graph of attendance of all home games in the 2013-2019 seasons.
 
-**Table 3:** Descriptive statistics of attendance of all home games in the 2013-2019 seasons. 
+**Figure 3:** Line graph of attendance for all home games in the 2013-2019 seasons.
+
+**Table 3:** Descriptive statistics of attendance for all home games in the 2013-2019 seasons.
+
 ![all_att_stats_table](https://user-images.githubusercontent.com/90481059/161100547-9c2437e3-bff1-4d18-8662-9008ff60338c.PNG)
 
 ## Miscellaneous
-Out of curiosity, I repeated this same process to train my model on the 2015-2019 seasons and to “predict” the attendance for the 2013-2014 seasons. The Tigers finished first in their division in both of these years, so I thought it would be interesting to see how the model would predict attendance for such seasons. I used the final set of features that gave the best results for 2018-2019.
+Out of curiosity, I repeated this same process to train my model on the 2015-2019 seasons and to “predict” the attendance for the 2013-2014 seasons. The Tigers finished first in their division in both of these years, so I thought it would be interesting to see how the model would predict attendance for such seasons. Again, I used the final set of features that gave the best results for 2018-2019.
 
 ![lin_reg_2013_2014_graph](https://user-images.githubusercontent.com/90481059/161100603-741ebdf3-25cc-4114-9599-2f6cb892777f.PNG)
+
 **Figure 4:** Line graph of predicted and actual attendance for 2013 and 2014 seasons.
 
 **Table 4:** Quantified comparisons of predicted vs actual attendance for 2013 and 2013 seasons.
+
 ![lin_reg_2013_2014_table](https://user-images.githubusercontent.com/90481059/161100655-c464840c-3905-4e2e-bd84-4cc9ce45de1b.PNG)
 
 ## Code
-Description of the Python files written for this project and uploaded to this repo:
-- tigers_2013.py, tigers_2014.py, tigers_2014.py, tigers_2015, tigers_2016, tigers_2017, tigers_2018, tigers_2019.py contain code for data collection and cleaning/wrangling for each season.
+Descriptions of the Python files written for this project and uploaded to this repo:
+- tigers_2013.py, tigers_2014.py, tigers_2015.py, tigers_2016.py, tigers_2017.py, tigers_2018.py, tigers_2019.py contain code for data collection and cleaning/wrangling for each season.
 - pitchers_list.py contains a dictionary of pitchers assigned to integers for each season.
-- tigers_att_model.py contains the code for running the linear regression model.
+- tigers_att_model.py contains the code for building and running the linear regression model.
 
 ## Conclusion
 This was my first personal data science project in which I collected, cleaned, and wrangled my own data set before using them to implement ML models. I gained valuable practical skills in programming with Python as well as using the pandas and sklearn libraries. I am particularly interested in developing my skills in regression models and predictive analytics, so there will certainly be more projects with this sort of focus on the way.
