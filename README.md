@@ -65,7 +65,7 @@ After experimenting, I found that removing some of the features improved the res
  
 **Table 1:** Quantified comparisons of actual vs predicted attendances using the final set of features listed above.
 
-![lin_reg_results_table](https://user-images.githubusercontent.com/90481059/161115756-07ea43b7-bbae-45ea-b6ce-60e4ae3fb8dd.PNG)
+![lin_reg_results_table](https://user-images.githubusercontent.com/90481059/161115973-32271b71-fb01-418e-98f3-6c479b1cd6a0.PNG)
 
 *% Diff. = |Pred. Average – Actual Average| / Actual Average x 100
 
