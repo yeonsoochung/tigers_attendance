@@ -81,7 +81,7 @@ Despite a weaker theoretical background in more advanced ML models, I attempted 
 
 **Table 2:** The best MAE's obtained after trialing many different parameter values as inputs to the random forest regressor and support vector regression models.
 
-![rfr_svr_mae_table](https://user-images.githubusercontent.com/90481059/161100481-8f07b7de-4bb5-45d4-92de-5460164d05b2.PNG)
+![rfr_svr_mae_table](https://user-images.githubusercontent.com/90481059/161116531-405c0004-9510-4eb1-8cb9-0431f2b0e4c4.PNG)
 
 It is very likely that better results than above can be achieved with different parameters. However, based on the number of trials that were run (by brute-force method up to a practical point) and their results, I believe that the linear regression model produces the best predictions compared to actual.
 
@@ -92,7 +92,7 @@ It is very likely that better results than above can be achieved with different 
 
 **Table 3:** Descriptive statistics of attendance for all home games in the 2013-2019 seasons.
 
-![all_att_stats_table](https://user-images.githubusercontent.com/90481059/161100547-9c2437e3-bff1-4d18-8662-9008ff60338c.PNG)
+![all_att_stats_table](https://user-images.githubusercontent.com/90481059/161116566-a550dad4-c899-4294-bed1-aaf9233a3daf.PNG)
 
 ## Miscellaneous
 Out of curiosity, I repeated this same process to train my model on the 2015-2019 seasons and to “predict” the attendance for the 2013-2014 seasons. The Tigers finished first in their division in both of these years, so I thought it would be interesting to see how the model would predict attendance for such seasons. Again, I used the final set of features that gave the best results for 2018-2019.
@@ -103,7 +103,7 @@ Out of curiosity, I repeated this same process to train my model on the 2015-201
 
 **Table 4:** Quantified comparisons of predicted vs actual attendance for 2013 and 2013 seasons.
 
-![lin_reg_2013_2014_table](https://user-images.githubusercontent.com/90481059/161112937-ea0af550-a324-46fe-ad38-1cbda1585802.PNG)
+![lin_reg_2013_2014_table](https://user-images.githubusercontent.com/90481059/161116622-0f40c6ec-ac69-4244-9588-58a02a8dbf94.PNG)
 
 Interestingly, these predictions are much closer to actual. This make sense because a team that generates more excitement would attract larger crowds, and these numbers would have lower variation due to many of these values being close to and limited by a ceiling (i.e. the stadium capacity). On the other hand, how low the floor can be would be harder to predict.
 
