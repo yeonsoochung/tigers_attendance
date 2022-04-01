@@ -1,6 +1,6 @@
 # Predicting the Detroit Tigers' Home Game Attendance Numbers
 ## Project Overview
-Here I discuss my first personal data science project in which I predict the Detroit Tigers professional baseball team's home attendance numbers for the 2018 and 2019 seasons. I did this by training on data from the 2013-2017 seasons and inputting 2018-2019 test data to machine learning (ML) models. This repo contains the code I wrote to collect, clean, and wrangle the data and to run the ML models for this project. This project topic was selected based on my casual interest in the sport and suitability with my current skill levels. The Tigers were selected as they are my home team.
+Here I discuss my first personal data science project in which I predict the Detroit Tigers professional baseball team's home attendance numbers for the 2018 and 2019 seasons. I did this by training on data from the 2013-2017 seasons and inputting 2018-2019 test data to machine learning (ML) models. This repo contains the code I wrote to collect, clean, and wrangle the data; and to run the ML models for this project. This project topic was selected based on my casual interest in the sport and suitability with my current skill levels. The Tigers were selected as they are my home team.
 
 Predictions were made with multiple linear regression, random forest regression, and support vector regression models. Upon comparison with actual 2018-2019 home attendance data, I found that the linear regression model yielded the best results.
 
@@ -30,7 +30,7 @@ After collecting it, I cleaned and wrangled the data so that it can be used to r
 - Game number: I assigned a number to each home game in chronological order (0 for the home-opener, 1 for the 2nd home game, etc.). The numbering starts over for each new season.
 - The day of the week that the game was played, where each day is represented by an integer (0-6 = Mon-Sun).
 - Game start time: transformed to military time so that ML models read them chronologically (e.g., a 12:10pm start time won’t be interpreted as a later start time than 7:10pm). Times were also converted to decimal form (e.g., 7:15pm start time is inputted to ML models as 19.25).
-- Weather conditions: There are seven categories of weather conditions represented as integers 1-5.
+- Weather conditions: There are seven categories of weather conditions represented as integers 1-5. Of all the games for which data was collected, only one had the weather condition "Rain", so I grouped it in the same category as "Drizzle." Fans would not really distinguish between "Clear" and "Sunny" conditions when deciding to attend a baseball game, so I grouped those two together as well.
   - Clear = 5
   - Sunny = 5
   - Partly Cloudy = 4
