@@ -1,6 +1,6 @@
 # Predicting the Detroit Tigers' Home Game Attendances
 ## Project Overview
-Here I discuss my first personal data science project in which I predict the Detroit Tigers professional baseball team's home attendance numbers for the 2018 and 2019 seasons. I did this by training on data from the 2013-2017 seasons and inputting 2018-2019 test data to machine learning (ML) models. This repo contains the code I wrote to collect, clean, and wrangle the data; and to run the ML models for this project. This project topic was selected based on my casual interest in the sport and suitability with my current skill levels. The Tigers were selected as they are my home team.
+Here I discuss my first personal data science project in which I predict the Detroit Tigers professional baseball team's home attendance numbers for the 2018 and 2019 seasons. I did this by training on data from the 2013-2017 seasons and inputting 2018-2019 test data to machine learning (ML) models. This repo contains the code I wrote to collect, clean, and wrangle the data; and to run the ML models for this project. This project topic was selected based on my casual interest in the sport and suitability with my current skill levels (early 2022).
 
 Predictions were made with multiple linear regression, random forest regression, and support vector regression models. Upon comparison with actual 2018-2019 home attendance data, I found that the linear regression model yielded the best results.
 
@@ -112,6 +112,3 @@ Descriptions of the Python files written for this project and uploaded to this r
 - tigers_2013.py, tigers_2014.py, tigers_2015.py, tigers_2016.py, tigers_2017.py, tigers_2018.py, tigers_2019.py contain code for data collection and cleaning/wrangling for each season.
 - pitchers_list.py contains a dictionary of pitchers assigned to integers for each season.
 - tigers_att_model.py contains the code for building and running the linear regression model.
-
-## Conclusion
-This was my first personal data science project in which I collected, cleaned, and wrangled my own data set before using them to implement ML models. I gained valuable practical skills in programming with Python as well as using the pandas and sklearn libraries. I am particularly interested in developing my skills in regression models and predictive analytics, so there will certainly be more projects with this sort of focus on the way.
